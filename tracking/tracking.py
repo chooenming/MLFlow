@@ -77,13 +77,13 @@ def draw_confusion_matrix(true_labels: np.ndarray, predicted_labels: np.ndarray,
 
 
 def main(args):
-    df = pd.read_csv("./imdb-dataset.csv")
+    df = pd.read_csv("./tracking/imdb-dataset.csv")
     df["label"] = pd.factorize(df["sentiment"])[0]
 
     test_size = 0.3
     train_df, test_df = prepare_data(df, test_size=test_size)
 
-    mlflow.set_experiment("tracking-demo")
+    mlflow.set_experiment("tracking-demo") # set experiment name
     with mlflow.start_run():
         train_inputs, test_inputs = make_features(train_df, test_df)
         model = train(
@@ -95,9 +95,10 @@ def main(args):
         )
 
         f1_score, figure = evaluate(model, test_inputs, test_df["label"].values, df["sentiment"].unique().tolist())
-        figure.savefig("./confusion_matrix.png")
+        figure.savefig("./tracking/confusion_matrix.png")
         print("F1 score: ", f1_score)
 
+        # specify what to be logged into mlflow
         mlflow.log_param("test_size", test_size)
         mlflow.log_param("C", args.C)
         mlflow.log_metric("f1_score", f1_score)

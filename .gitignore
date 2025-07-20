@@ -1,1 +1,4 @@
 ./tracking/imdb-dataset.csv
+./mlflow-env
+./mlruns
+./tracking/*.png
