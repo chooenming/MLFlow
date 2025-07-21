@@ -113,12 +113,13 @@ def main(args):
 
         signature = infer_signature(test_inputs.toarray(), model.predict(test_inputs))
         sentiment_detector = SentimentDetector()
+        # get info from mlruns
         artifacts = {
             "vectorizer": "./vectorizer.joblib",
             "model": "model.joblib"
         }
         mlflow.pyfunc.log_model(
-            artifact_path="model", 
+            artifact_path="model", # model directory in MLFlow
             conda_env="./conda.yaml",
             python_model=sentiment_detector, 
             artifacts=artifacts

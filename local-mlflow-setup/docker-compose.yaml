@@ -1,0 +1,16 @@
+version: "3.8"
+
+# define volume for Postgres database and artifact store
+volumes:
+  postgres_data:
+  artifact_store:
+
+# define services
+# one for Pstgres database
+# one for tracking server
+services:
+  mlflow-db:
+    container_name: mlflow-backend-store
+    image: postgres:13.3
+    env_file:
+      - .envs/.postgres

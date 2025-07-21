@@ -1,0 +1,5 @@
+
+# Ignore everything in the docker directory 
+!docker
+!pyproject.toml
+!poetry.lock
