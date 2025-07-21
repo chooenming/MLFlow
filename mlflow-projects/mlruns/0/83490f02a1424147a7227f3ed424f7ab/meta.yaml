@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/chooenming/Desktop/MLFlow/mlflow-projects/mlruns/0/83490f02a1424147a7227f3ed424f7ab/artifacts
+end_time: 1753022211608
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 83490f02a1424147a7227f3ed424f7ab
+run_name: dapper-foal-401
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753021718233
+status: 4
+tags: []
+user_id: chooenming

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/chooenming/Desktop/MLFlow/mlruns/377386860532745942/51bf9d59c7974e57af84cbe3fadbfbd9/artifacts
+end_time: 1753005829415
+entry_point_name: ''
+experiment_id: '377386860532745942'
+lifecycle_stage: active
+run_id: 51bf9d59c7974e57af84cbe3fadbfbd9
+run_name: charming-panda-486
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753005825222
+status: 3
+tags: []
+user_id: chooenming
