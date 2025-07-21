@@ -2,3 +2,7 @@
 ./mlflow-env
 ./mlruns
 ./tracking/*.png
+./mlflow-projects/*.csv
+./mlflow-projects/venv
+./mlflow-models/*.csv
+./mlflow-model-registry/*.csv
